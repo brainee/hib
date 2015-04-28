@@ -1,1 +1,0 @@
-\\ctripcom\ctrip\工具区\Restrained\技术研发中心\开发软件\AspNetMVC3\AspNetMVC3Setup.exe

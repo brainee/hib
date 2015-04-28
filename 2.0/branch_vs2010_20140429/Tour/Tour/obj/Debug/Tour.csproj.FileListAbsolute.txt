@@ -1,5 +1,0 @@
-D:\working1\TFS2010\website\_webresource_\code\lizard\2.0\branch_vs2010_20140429\Tour\Tour\bin\Tour.dll
-D:\working1\TFS2010\website\_webresource_\code\lizard\2.0\branch_vs2010_20140429\Tour\Tour\bin\Tour.pdb
-D:\working1\TFS2010\website\_webresource_\code\lizard\2.0\branch_vs2010_20140429\Tour\Tour\obj\Debug\Tour.csprojResolveAssemblyReference.cache
-D:\working1\TFS2010\website\_webresource_\code\lizard\2.0\branch_vs2010_20140429\Tour\Tour\obj\Debug\Tour.dll
-D:\working1\TFS2010\website\_webresource_\code\lizard\2.0\branch_vs2010_20140429\Tour\Tour\obj\Debug\Tour.pdb

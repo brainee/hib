@@ -1,1 +1,0 @@
-window.LizardLocalroute={"/detail/{id}.html":"views/Demo/detail","/detail/{{city}}{{(int)cityId}}":"views/Demo/detail","xx/...":"views/Demo/empty","index":"views/Demo/index","/list":"views/Demo/list","/ui/calendar":"views/ui/calendar","/ui/header":"views/ui/header","/ui/index":"views/ui/index","defaultView":"index"}
