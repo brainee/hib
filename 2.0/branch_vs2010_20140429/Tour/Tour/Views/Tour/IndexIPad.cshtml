@@ -1,0 +1,120 @@
+﻿@using System.Configuration
+
+<!DOCTYPE html>
+<html>
+<head>
+    @RenderPage("../Shared/HeaderIPad.cshtml")
+</head>
+<body class="gray" onselectstart="return false">
+    @RenderPage("../Shared/BodyLayout.cshtml")
+
+    <script type="text/lizard-config">
+        {
+            "url_schema": "/indexipad",
+            "model": {
+                "apis": [],
+                "filter": function (datas){
+                    return datas;
+                }
+            },
+            "view":{
+                "header": Lizard.T("headTmpl"),
+                "viewport": Lizard.T("viewportTmpl")
+            },
+            "controller": "@ConfigurationManager.AppSettings["WebresourcePDBaseUrl"]tour/controllers/index.js"
+        }
+    </script>
+
+    <script id="headTmpl" type="text/lizard-template">
+        <h1>团队游</h1>
+    </script>
+
+    <script id="viewportTmpl" type="text/lizard-template">
+        <div class="body nofoot" style="padding-top:0">
+            <div class="pad_background"></div>
+            <div class="pad_wrapper">
+                <span class="fdFormHeader fw-light">搜索</span>
+                <div class="fdForm">
+                    <dl class="zero_box">
+                        <dd class="city_depart btn_active city_pad">
+                            <div id="g_depart" class="tit2" data-id="2">上海</div>
+                        </dd>
+                        <dd class="city_arrive btn_active city_pad">
+                            <div id="g_dest" class="tit2" data-id="43" data-sltid="0" data-initial="S" data-inland="1">三亚</div>
+                        </dd>
+                    </dl>
+                    <button id="searchlistsubmit" class="btn_org mt20" value=""><i></i>查询</button>
+                </div>
+            </div>
+            <table class="motif_list">
+                <tbody>
+                    <tr>
+                        <td><i class="motif_rim" data-name="mobi"></i>周边</td>
+                        <td><i class="motif_inland" data-name="国内"></i>国内</td>
+                        <td><i class="motif_hktw" data-name="港澳台"></i>港澳台</td>
+                        <td><i class="motif_jsk" data-name="日韩"></i>日韩</td>
+                    </tr>
+                    <tr>
+                        <td><i class="motif_asia" data-name="东南亚"></i>东南亚</td>
+                        <td><i class="motif_europe" data-name="欧洲"></i>欧洲</td>
+                        <td><i class="motif_america" data-name="美洲"></i>美洲</td>
+                        <td><i class="motif_australia" data-name="澳中东非"></i>澳中东非</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="sift_product hidden" style="display: block;">
+                <h2>精选产品</h2>
+                <ul>
+                    <li>
+                        <a href="#detail?productId=5666&amp;saleCityId=2&amp;departCityId=0&amp;from=index">
+                            <div class="product_pic"><img src="http://pkgpic.ctrip.com/images2/1/15/15_40_s33088.JPG" alt=""></div>
+                            <div class="product_title">
+                                <strong class="base_price"><dfn>¥</dfn>5988</strong>						                
+                                <h3><em>新加坡5日游</em></h3>						            
+                            </div>                                    
+                            <span class="product_tips"><em>促销啦</em><em>优惠啦</em></span>
+                         </a>
+                    </li>
+                    <li>
+                        <a href="#detail?productId=6666&amp;saleCityId=2&amp;departCityId=0&amp;from=index">					               
+                            <div class="product_pic"><img src="http://pkgpic.ctrip.com/images2/1/15/15_39_s33088.JPG" alt=""></div>                                   
+                            <div class="product_title">                                        
+                                <strong class="base_price"><dfn>¥</dfn>566</strong>						                
+                                <h3><em>上海2日游</em></h3>						            
+                            </div>                                    
+                            <span class="product_tips"><em>走过路过不要错过</em><em>只要998，998马上去美国</em></span>				                
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#detail?productId=5666&amp;saleCityId=2&amp;departCityId=0&amp;from=index">
+                            <div class="product_pic"><img src="http://pkgpic.ctrip.com/images2/1/15/15_40_s33088.JPG" alt=""></div>
+                            <div class="product_title">
+                                <strong class="base_price"><dfn>¥</dfn>5988</strong>
+                                <h3><em>新加坡5日游</em></h3>
+                            </div>
+                            <span class="product_tips"><em>促销啦</em><em>优惠啦</em></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#detail?productId=6666&amp;saleCityId=2&amp;departCityId=0&amp;from=index">
+                            <div class="product_pic"><img src="http://pkgpic.ctrip.com/images2/1/15/15_39_s33088.JPG" alt=""></div>
+                            <div class="product_title">
+                                <strong class="base_price"><dfn>¥</dfn>566</strong>
+                                <h3><em>上海2日游</em></h3>
+                            </div>
+                            <span class="product_tips"><em>走过路过不要错过</em><em>只要998，998马上去美国</em></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </script>
+    <script>
+        window.isIpad = true;
+    </script>
+    @RenderPage("../Shared/Footer.cshtml")
+
+</body>
+</html>
+
+

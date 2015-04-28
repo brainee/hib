@@ -1,0 +1,83 @@
+﻿<script>
+    function creatImg() {
+        //var node = document.createElement("img");
+        //node.setAttribute("data-src", "http://pkgpic.ctrip.com/images2/1/227/227_43_s31840-m.jpg");
+        //node.setAttribute("src", "http://pic.c-ctrip.com/vacation_v2/h5/group_travel/no_product_pic.png");
+        //document.getElementById("#wrapper2").appendChild(node);
+     
+       if (document.body.scrollTop) {
+            var str = "<li class='hot_img'><img width='142px' height='80px' alt='' src='http://pic.c-ctrip.com/vacation_v2/h5/group_travel/no_product_pic.png' data-//src='http://pkgpic.ctrip.com/images2/1/227/227_43_s31840-m.jpg'></li>";
+
+            $("#wrapper2").append(str);
+        }
+
+    }
+    creatImg();
+    document.body.scroll = function () {
+        var str = "<li class='hot_img'><img width='142px' height='80px' alt='' src='http://pic.c-ctrip.com/vacation_v2/h5/group_travel/no_product_pic.png' data-//src='http://pkgpic.ctrip.com/images2/1/227/227_43_s31840-m.jpg'></li>";
+
+        $("#wrapper2").append(str);
+    }
+    $("body").scroll(function () {
+        var str = "<li class='hot_img'><img width='142px' height='80px' alt='' src='http://pic.c-ctrip.com/vacation_v2/h5/group_travel/no_product_pic.png' data-//src='http://pkgpic.ctrip.com/images2/1/227/227_43_s31840-m.jpg'></li>";
+
+        $("#wrapper2").append(str);
+    })
+</script>
+<div id="div1" style="height:900px;display:block">
+</div>
+<article class="wrap" id="wrapper1" style="height:300px">
+  <div class="product_list_box" style="padding-top: 42px">
+    <div class="product_list" id ="test">
+      <ul class="hot_list_tab btn_active" data-pid="1847895&amp;saleCityId=2&amp;departCityId=2">
+        <li class="hot_img">
+          <img width="142px" height="80px" alt="" src="http://pic.c-ctrip.com/vacation_v2/h5/group_travel/no_product_pic.png" data-src="http://pkgpic.ctrip.com/images2/1/227/227_43_s31840-m.jpg">
+        </li>
+        <li class="hot_vacation">
+          <div class="ellipsis">
+            <p class="xname">
+              江苏宜兴2日半自助游(3钻)·览陶祖圣境秀丽风光</p>
+          </div>
+          <div class="price_wrap">
+            <div class="pices">
+              <dfn>¥</dfn> <span>369</span>起
+            </div>
+            <i class="diamond diamond_3"></i>
+          </div>
+          <div class="other">
+            <div class="float_right">
+            </div>
+          </div>
+        </li>
+      </ul>
+      </div>
+      </div>
+      </article>
+
+<article class="wrap" id="wrapper2">
+  <div class="product_list_box" style="padding-top: 42px">
+    <div class="product_list" id ="test">
+      <ul class="hot_list_tab btn_active" data-pid="1847895&amp;saleCityId=2&amp;departCityId=2">
+        <li class="hot_img">
+          <img width="142px" height="80px" alt="" src="http://pic.c-ctrip.com/vacation_v2/h5/group_travel/no_product_pic.png" data-src="http://pkgpic.ctrip.com/images2/1/227/227_43_s31840-m.jpg">
+        </li>
+        <li class="hot_vacation">
+          <div class="ellipsis">
+            <p class="xname">
+              江苏宜兴2日半自助游(3钻)·览陶祖圣境秀丽风光</p>
+          </div>
+          <div class="price_wrap">
+            <div class="pices">
+              <dfn>¥</dfn> <span>369</span>起
+            </div>
+            <i class="diamond diamond_3"></i>
+          </div>
+          <div class="other">
+            <div class="float_right">
+            </div>
+          </div>
+        </li>
+      </ul>
+      </div>
+      </div>
+      </article>

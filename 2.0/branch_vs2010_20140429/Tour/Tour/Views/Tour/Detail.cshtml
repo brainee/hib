@@ -1,0 +1,153 @@
+﻿@using System.Configuration
+
+<!DOCTYPE html>
+<html>
+<head>
+    @RenderPage("../Shared/Header.cshtml")
+</head>
+<body class="gray" onselectstart="return false">
+    @RenderPage("../Shared/BodyLayout.cshtml")
+
+    <script type="text/lizard-config">
+        {
+            "url_schema": "detail/{pid}/{dcid}",
+            "model": {
+                "apis":[{
+                    url:'http://m.ctrip.com/restapi/vacationapi/product/productdetail',
+                    postdata:{"pId":Lizard.P("pid"),"scId":2,"dcId":Lizard.P("dcid"),"reqType":[1],"head":{"cid":"a64ac7fd-203a-83bd-5e99-6bb4d594171b","ctok":"351858059049938","cver":"1.0","lang":"01","sid":"8888","syscode":"09","auth":""}}
+                }],
+                "filter":function (datas){
+                    var ret = {data:datas[0].data};
+                    return ret;
+                }
+            },
+            "view":{
+                "header": Lizard.T("headTmpl"),
+                "viewport": Lizard.T("viewportTmpl")
+            },
+            "controller": "@ConfigurationManager.AppSettings["WebresourcePDBaseUrl"]tour/controllers/detail.js"
+        }
+    </script>
+
+    <script id="headTmpl" type="text/lizard-template">
+        <h1>产品详情</h1>
+    </script>
+
+    <script id="viewportTmpl" type="text/lizard-template">
+        <div class="body">
+            <div class="banner_box" id="js_detail_pic_slide">
+            </div>
+            <ul class="detail_tab">
+                <li class="current">概要</li>
+                <li><%if(data.travelDay){ %><%=data.travelDay %>日<%}else{ %>暂无<%} %>行程</li>
+                <li><%=data.commentNum %>条点评</li>
+            </ul>
+            <div style="display: none;" class="tab_loading">
+                <div style="" class="cui-breaking-load"> <div class="cui-i cui-m-logo"></div> <div class="cui-i cui-w-loading"></div></div>
+            </div>
+            <div class="profile_box js_tab_showbox">
+                <%if(data.detailInfo){ %>
+                <div class="product_wrap">
+                    <h2><%=data.detailInfo.pName %><%if(data.detailInfo.name){ %>·<%=data.detailInfo.name %><% } %></h2>
+                    <div class="price_box">
+                        <% if(data.detailInfo.price == 0) { %>
+                        <p class="price font14">实时计价</p>
+                        <% } else { %>
+                        <p class="price"><dfn>¥</dfn><%=data.detailInfo.price %><em>起</em></p>
+                        <%} %>
+                        <% if(data.detailInfo.isCashBack) { %><i class="orange"><dfn>返</dfn><%=data.detailInfo.cashBackAmount %></i><%} %>
+                        <% if(data.detailInfo.isWifi) { %><i class="wifi">免费WiFi</i><%} %>
+                        <% if(!_.isEmpty(data.detailInfo.specialTags)) { %>
+                        <% _.each(data.detailInfo.specialTags, function (v, k) { %>
+                        <i class="green"><%=v %></i>
+                        <% }) %>
+                        <% } %>
+                    </div>
+                    <% if(!_.isEmpty(data.detailInfo.promos)) { %>
+                    <p class="onsale_text">
+                        <% _.each(data.detailInfo.promos, function (v, k) { %>
+                        <%=v %><% if((k+1) !== data.detailInfo.promos.length) { %>，<% } %>
+                        <% }) %>
+                    </p>
+                    <% } %>
+                    <div class="corp_box_wrap">
+                        <div class="corp_box">
+                            <span class="start_city"><%=data.detailInfo.departName %>出发</span>
+                            <span class="corp"><%=data.detailInfo.vendor %></span>
+                            <span class="number">编号:<%=data.detailInfo.pId %></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend_wrap">
+                    <% if(data.detailInfo.recommends) { %>
+                    <div class="recommend_detail">
+                        <div class="recommend_txt">
+                            <h3>产品经理推荐</h3>
+                            <ul>
+                                <% _.each(data.detailInfo.recommends, function (v, k) { %>
+                                <li<% if(k > 2) { %>class="js_more_Content" style="display:none"<% } %>><%=v.desc %> <% if(v.url) { %><a href="<%=v.url %>" target="_blank">查看更多>></a><% } %></li>
+                                <% }) %>
+                            </ul>
+                            <% if(data.detailInfo.recommends.length > 3) { %><div class="more_text"><a class="js_more_Content_btn" href="javascript:void(0);">更多</a></div><% } %>
+                        </div>
+                    </div>
+                    <% } %>
+
+                    <% var isCost = _.every(_.pluck(data.detailInfo.costs, "descs"), function(key) { return key == '' }) %>
+                    <% if(!isCost) { %>
+                    <div class="recommend_detail">
+                        <div class="recommend_txt">
+                            <h3>费用说明</h3>
+                            <ul>
+                                <% _.each(data.detailInfo.costs, function (v, k) { %>
+                                <% if(v.descs.length > 0) { %>
+                                <% _.each(v.descs, function (m, n) { %>
+                                <li><%=m %></li>
+                                <% }) %>
+                                <% } %>
+                                <% }) %>
+                            </ul>
+                        </div>
+                    </div>
+                    <% } %>
+                    <ul class="more_info">
+                        <li class="btn_active"><a href="#booking.step1">出发班期与价格日历</a></li>
+                        <% if(data.detailInfo.isCashBack) { %>
+                        <li class="btn_active"><a href="#detail.return.cash">返现说明</a></li><% } %>
+                        <li class="btn_active"><a href="#detail.booking.note">预订须知</a></li>
+                        <% if(_.indexOf([11,12,26,34], data.detailInfo.pCategoryId) >=0) { %>
+                        <li class="btn_active"><a href="#detail.visa">签证/签注</a></li><% } %>
+                        <% if(data.qaNum > 0) { %>
+                        <li class="detail_question btn_active"><span><%=data.qaNum %>条</span>咨询问答</a></li><% } %>
+                    </ul>
+                </div>
+                <% if(!data.isBook) { %><div class="product_offline_notice">此产品暂不支持在线预订</div><%} %>
+                <%} %>
+            </div>
+
+            <div class="route_box js_tab_showbox" style="display: none;">
+            </div>
+
+            <div class="score_box js_tab_showbox" style="display: none;">
+            </div>
+        </div>
+
+        <% if(data.isBook) { %>
+        <% if(data.detailInfo.isTel) { %>
+        <footer class="book_now_double"><a class="telphone_ask_btn js_telphone_btn" href="tel:4000086666" data-num="4000086666">电话咨询</a><a class="book_now_btn js_in_Footer" href="javascript:void(0);">开始预订</a></footer>
+        <% } else { %>
+        <footer class="book_now js_in_Footer"><a href="javascript:void(0);">开始预订</a></footer>
+        <%} %>
+        <% } else { %>
+        <footer class="book_now"><a href="tel:4000086666" data-num="4000086666" class="js_telphone_btn">拨打免费服务电话</a></footer>
+        <%} %>
+    </script>
+
+    @RenderPage("../Shared/Footer.cshtml")
+
+</body>
+</html>
+
+
+
+

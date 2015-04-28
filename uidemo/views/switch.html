@@ -1,0 +1,45 @@
+<link href="style/style.css" rel="stylesheet" />
+<div id="previewPane" class="pane" style="display: block; "><h2>这里是c.ui.switch的使用，用于提供一个可选择的阀（相当于radio）</h2>
+
+<h2>效果</h2>
+
+<div class="hm" style="margin-left:27px;display: inline-block;"></div>
+
+<div id="msg" style="margin-left: 27px;margin-top:10px;">123</div>
+
+<h2>Method</h2>
+
+<h3>public unChecked</h3>
+
+<pre><code class="javascript"><span class="comment">//将控件置为非选择状态</span>
+unChecked: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> ... }
+</code></pre>
+
+<h3>public checked</h3>
+
+<pre><code class="javascript"><span class="comment">//将控件置为选择状态</span>
+checked: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> ... }
+</code></pre>
+
+<h3>public getStatus</h3>
+
+<pre><code class="javascript"><span class="comment">//获得控件当前选择状态</span>
+getStatus: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span> ... }
+</code></pre>
+
+<h2>初始化：</h2>
+
+<pre><code class="javascript">define([<span class="string">'app/ui/c.ui.switch'</span>], <span class="keyword">function</span>(_<span class="keyword">Switch</span>){
+    <span class="keyword">var</span> switch = <span class="keyword">new</span> _<span class="keyword">Switch</span>({
+        rootBox: <span class="keyword">this</span>.<span class="variable">$el</span>.find(<span class="string">'.hm'</span>),    <span class="comment">//switch的容器</span>
+        checked: true,                    <span class="comment">//默认状态</span>
+        changed: <span class="keyword">function</span> () {          <span class="comment">//状态发生改变时执行的函数</span>
+            $(<span class="string">'#msg'</span>).html($(<span class="string">'&lt; div&gt;当前状态：'</span> + <span class="keyword">this</span>.getStatus() + <span class="string">'&lt; /div&gt;'</span>));
+        }
+    });
+});
+</code></pre>
+
+<p>注意：switch的容器，建议该容器设为display:inline-block;</p></div>
+
+

@@ -1,0 +1,69 @@
+<section id="bookingSection">
+</section>
+<style type="text/css">
+    #bookingSection .infoitem{ position:relative; }
+    #bookingSection .itemMore{ position:absolute; padding:0px; bottom:-3px; right:0px;}
+    #bookingSection .itemMore em{width:50px;height:22px; display:inline-block;color:#333;text-align:right;}
+</style>
+<script type="text/template" id="booking_tpl">
+
+  <article class="cfill_orders">
+    <div id="notLoginNote" class="not_login" style="display:none">还没有携程账户？登录后预订更便捷。</div>
+    
+    <section class="p10">          
+      <ul id="bookingInfo" class="car_combd">
+        <li class="hd"><span><em><dfn>&yen;</dfn><%= unitPrice %></span><h4 class="ellips_line2"><%= pd.pinfo.ptag %>&nbsp;</h4></li>
+        <li class="tx_reset">
+          <div class="corder_img cui-item-img"><img id="pimg" src="<%= pd.pinfo.pimg %>" /></div>
+          <div class="rft">
+              <p id="carType" data-hash='pd.pinfo.pname'><label>车型</label><span class="ellips_line2"><%= pd.pinfo.pname%></span></p>
+              <p id="maxAccomondation" data-hash='pd.pinfo.cap'><label>可坐人数</label><%= pd.pinfo.cap%></p>
+              <p id="pickupPlace" data-hash='productParams.statname'><label>用车地点</label><%= productParams.statname%></p>              
+              <p id="seeOffPlace" data-hash='productParams.statname'><label>送达地点</label><%= productParams.statname%></p>              
+              <p id="bookTime" data-hash='pd.usedatet'><label>用车时间</label><%= pd.usedatet%></p>
+              <p id="rentPeriod" data-hash='productParams.usedur'><label>用车时长</label><%= productParams.usedur %></p>
+              <p id="hotRoute" data-hash='productParams.routeName'><label>热门线路</label><%= productParams.routeName %></p>
+          </div>
+        </li>
+        <li id="serviceInfo">
+          <h2>服务信息</h2>
+          <div class="infoitem" id="feeSummary" data-hash='feeInfo'><p class="line3_hidden js_text"><label>费用信息</label><%= feeInfo %><i class="js_space"></i></p><p class="itemMore cblue" style="display:none"><em>...</em>更多</p></div>
+          <div class="infoitem" id="feeDistance" data-hash='pd.pinfo.scourse'><p class="line3_hidden js_text"><label>服务里程</label><%= pd.pinfo.scourse%><i class="js_space"></i></p><p class="itemMore cblue" style="display:none"><em>...</em>更多</p></div>
+          <div class="infoitem" id="feePeriod" data-hash='pd.pinfo.slen'><p class="line3_hidden js_text"><label>服务时长</label><%= pd.pinfo.slen%><i class="js_space"></i></p><p class="itemMore cblue" style="display:none"><em>...</em>更多</p></div>
+          <div class="infoitem" id="destinationAreaCovered" data-hash='pd.pinfo.aarea'><p class="line3_hidden js_text"><label>送达地区</label><%= pd.pinfo.aarea%><i class="js_space"></i></p><p class="itemMore cblue" style="display:none"><em>...</em>更多</p></div>
+          <div class="infoitem" id="pickupAreaCovered" data-hash='pd.pinfo.darea'><p class="line3_hidden js_text"><label>出发地区</label><%= pd.pinfo.darea%><i class="js_space"></i></p><p class="itemMore cblue" style="display:none"><em>...</em>更多</p></div>
+          
+          <span id="feeMoreInfo" class="cmoretxt">更多详细信息&nbsp;<i id="feeMoreInfoExpandIcon" class="cmore_top"></i></span>
+          <div id="feeMoreInfoContent" class="cgray break_all" style="display:none;">
+            <%
+            for(var i = 0; i < moreDetails.length; i++){ 
+            %>            
+             <% if(moreDetails[i] && moreDetails[i].descs && moreDetails[i].descs.length > 0){
+                    for(var j = 0; j < moreDetails[i].descs.length; j++){ 
+             %>
+                <div><%=j+1 + "." + (moreDetails[i].descs[j].desc &&  moreDetails[i].descs[j].desc.replace(/(<([^>]+)>)/ig,'')) %></div>
+             <%} }%>            
+            <%
+               }
+             %>
+          </div>
+        </li>
+      </ul>
+      <p class="cfonts"></p>            
+
+      <!--订单填写-->
+      <ul id="requiredFieldsSection" class="car_combd">
+        <li class="hd">订单填写</li>                      
+      </ul>
+      <p class="cfonts"></p>
+      <ul id="optionalFieldsSection" class="car_combd">
+      </ul>     
+      <p id="friendlyNotes" class="cfonts"></p>
+    </section>
+  </article>
+
+  <!--支付-->
+  <div class="btn_yellow"><button class="btn_pay anchor" data-eventSource="pay">下一步</button>
+    订单总额:<span class="ml5">&yen;<span id="totalPrice"><%= pd.pinfo.price * useCount %></span></span>
+  </div>
+</script>

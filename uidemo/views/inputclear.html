@@ -1,0 +1,26 @@
+<link href="style/style.css" rel="stylesheet" />
+<div id="previewPane" class="pane" style="display: block; height: 703px;"><h2>这里是c.ui.inputclear的使用，该插件主要清空文本框中的数据</h2>
+
+<h2>效果：</h2>
+<input type="button" id="demo" value="点击注册inputclear事件" style="background-color:Orange; width:135px; text-align:center" />
+<div style="width:80%;max-width:200px;">
+    <input type="text" id="input" class="car_combd txt" style="border:1px #ccc solid; height:35px; width:85%;margin-left:27px;border-radius: 3px;" />
+</div>
+
+<h2>主要属性如下：</h2>
+
+<pre><code class="css">// @<span class="keyword">param</span> <span class="keyword">input</span> <span class="rules">{dom}</span>                需要添加功能的文本框
+// @<span class="keyword">param</span> clearClass <span class="rules">{String}</span>         自定义class
+// @<span class="keyword">param</span> clearCallback <span class="rules">{function}</span>    清空后的回调函数
+// @<span class="keyword">param</span> offset <span class="rules">{object}</span>             设置点击按钮的位置
+</code></pre>
+
+<h2>inputclear的简单初始化：</h2>
+
+<pre><code class="delphi">define([<span class="string">'app/ui/c.ui.input.clear'</span>], <span class="function"><span class="keyword">function</span><span class="params">(InputClear)</span><span class="comment">{
+    InputClear(el,null,null,{}</span>);</span><span class="comment">//el为你添加功能的文本框</span>
+});
+</code></pre>
+
+</div>
+

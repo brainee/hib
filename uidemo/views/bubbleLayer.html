@@ -1,0 +1,41 @@
+﻿<link href="style/style.css" rel="stylesheet" />
+<ul class="cui-cond-bar cui-top-fixed ttt1">
+	<li id="filter">筛选<i class="cui-fl-sort cui-fl-filter"></i></li>
+	<li id="orderBy" class="cond-bar-current">默认排序<i class="cui-fl-sort"></i></li>
+</ul>
+<div id="previewPane" class="pane" style="display: block;">
+    <h2>主要属性如下：</h2>
+    <pre><code class="css">// @<span class="keyword">param</span> <span class="keyword">dir</span><span class="rules">{String}</span>         el相对于气泡显示方向：up/down
+// @<span class="keyword">param</span> triggerEl<span class="rules">{object}</span>         触发事件的el对象
+// @<span class="keyword">param</span> click<span class="rules">{function}</span>         el点击事件
+// @<span class="keyword">param</span> itemTemplate<span class="rules">{String}</span>         显示气泡的<span class="keyword">html</span>模板(underscore模板)
+// @<span class="keyword">param</span> data<span class="rules">{object}</span>         传入模板的参数对象
+    </code></pre>
+
+    <div id="wrapper"></div>
+    <div id="content">
+        <h2>Demo：</h2>
+        <input type="button" id="demo1" value="点击我显示气泡提示" style="background-color:Orange; width:135px; text-align:center" />
+    </div>
+    <pre><code class="vbscript">define([<span class="comment">'libs', 'c', 'cBasePageView'], function(libs, c, BasePageView){</span>
+    this.showBubbleLayer({
+        dir: <span class="comment">'up',</span>
+        triggerEl: $(e.currentTarget),
+        click: <span class="keyword">function</span>(data){
+            self.showMessage(JSON.stringify(data));
+        },
+        itemTemplate: <span class="comment">'&lt;%=itemData.name%&gt;：&lt;%=itemData.data%&gt;',</span>
+        data: [
+            { name: <span class="comment">'价格', data: '￥35' },</span>
+            { name: <span class="comment">'评分', data: 80 },</span>
+            { name: <span class="comment">'级别', data: 5 }</span>
+        ]
+    });
+});
+    </code></pre>
+</div>
+
+
+ <ul class="cui-cond-bar cui-bottom-fixed ttt2">
+	<li class="cond-bar-current">默认排序<i class="cui-fl-sort"></i></li>
+</ul>

@@ -1,0 +1,8 @@
+﻿var sitemap = 
+
+(function() {
+    var _ = function() { var r={},a=arguments; for(var i=0; i<a.length; i+=2) r[a[i]]=a[i+1]; return r; }
+    var _creator = function() { return _(b,[_(c,d,e,f,g,h,i,[_(c,j,e,f,g,k),_(c,l,e,f,g,m),_(c,n,e,f,g,o),_(c,p,e,q,g,r,i,[_(c,s,e,f,g,t,i,[_(c,u,e,f,g,v),_(c,w,e,f,g,x),_(c,y,e,f,g,z),_(c,A,e,f,g,B)]),_(c,C,e,f,g,D),_(c,E,e,f,g,F,i,[_(c,G,e,f,g,H),_(c,I,e,f,g,J),_(c,K,e,f,g,L),_(c,M,e,f,g,N)])]),_(c,O,e,q,g,P,i,[_(c,Q,e,f,g,R,i,[_(c,S,e,f,g,T)]),_(c,U,e,f,g,V)]),_(c,W,e,q,g,X,i,[_(c,Y,e,f,g,Z),_(c,ba,e,f,g,bb),_(c,U,e,f,g,bc)]),_(c,bd,e,q,g,be,i,[_(c,bf,e,f,g,bg),_(c,ba,e,f,g,bh),_(c,U,e,f,g,bi)]),_(c,bj,e,f,g,bk),_(c,bl,e,f,g,bm,i,[_(c,bn,e,f,g,bo)])])]);}; 
+var b="rootNodes",c="pageName",d="用车5.2",e="type",f="Wireframe",g="url",h="用车5_2.html",i="children",j="版本说明",k="版本说明.html",l="需求背景以及通用规则【11\/15】",m="需求背景以及通用规则【11_15】.html",n="首页",o="首页.html",p="接机\/火车",q="Flow",r="接机_火车.html",s="接机搜索【11\/13】",t="接机搜索【11_13】.html",u="到达日期",v="到达日期.html",w="用车城市【10\/12】",x="用车城市【10_12】.html",y="未出行机票【11\/21】",z="未出行机票【11_21】.html",A="查找航班【10\/12】",B="查找航班【10_12】.html",C="用车列表页【9\/13】",D="用车列表页【9_13】.html",E="订单填写【11\/11】",F="订单填写【11_11】.html",G="送达地点\/出发地点【9\/26】",H="送达地点_出发地点【9_26】.html",I="发票",J="发票.html",K="接机牌接车牌",L="接机牌接车牌.html",M="预订须知和补充条款【10\/18】",N="预订须知和补充条款【10_18】.html",O="送机\/火车",P="送机_火车.html",Q="送机搜索",R="送机搜索.html",S="用车城市",T="用车城市.html",U="订单填写",V="订单填写.html",W="日租\/时租",X="日租_时租.html",Y="时租日租查询【9\/13】",Z="时租日租查询【9_13】.html",ba="用车列表页",bb="用车列表页.html",bc="订单填写_1.html",bd="热门线路【删除】",be="热门线路【删除】.html",bf="热门线路查询",bg="热门线路查询.html",bh="用车列表页_1.html",bi="订单填写_2.html",bj="订单完成页【10\/10】",bk="订单完成页【10_10】.html",bl="订单列表页",bm="订单列表页.html",bn="订单详情页【10\/28】",bo="订单详情页【10_28】.html";
+return _creator();
+})();

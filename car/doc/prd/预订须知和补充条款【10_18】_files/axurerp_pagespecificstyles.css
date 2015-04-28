@@ -1,0 +1,722 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u0_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:24px;
+    top:45px;
+    width:320px;
+    height:491px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:326px;
+    height:497px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:238px;
+    width:316px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u2_normal.png');
+}
+
+.u2_container {
+    position:absolute;
+    left:24px;
+    top:46px;
+    width:320px;
+    height:20px;
+}
+
+#u2_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:326px;
+    height:26px;
+}
+
+.u3 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:316px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u4_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u4_normal.png');
+}
+
+.u4_container {
+    position:absolute;
+    left:28px;
+    top:57px;
+    width:2px;
+    height:3px;
+}
+
+#u4_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:8px;
+    height:9px;
+}
+
+.u5 {
+    position:absolute;
+    left:2px;
+    top:-6px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u6_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u6_normal.png');
+}
+
+.u6_container {
+    position:absolute;
+    left:36px;
+    top:55px;
+    width:2px;
+    height:5px;
+}
+
+#u6_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:8px;
+    height:11px;
+}
+
+.u7 {
+    position:absolute;
+    left:2px;
+    top:-6px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u8_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u8_normal.png');
+}
+
+.u8_container {
+    position:absolute;
+    left:32px;
+    top:56px;
+    width:2px;
+    height:4px;
+}
+
+#u8_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:8px;
+    height:10px;
+}
+
+.u9 {
+    position:absolute;
+    left:2px;
+    top:-6px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u10_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u10_normal.png');
+}
+
+.u10_container {
+    position:absolute;
+    left:40px;
+    top:53px;
+    width:2px;
+    height:7px;
+}
+
+#u10_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:8px;
+    height:13px;
+}
+
+.u11 {
+    position:absolute;
+    left:2px;
+    top:-4px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u12_normal.png');
+}
+
+.u12_container {
+    position:absolute;
+    left:44px;
+    top:51px;
+    width:2px;
+    height:9px;
+}
+
+#u12_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:8px;
+    height:15px;
+}
+
+.u13 {
+    position:absolute;
+    left:2px;
+    top:-4px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u14 {
+    position:absolute;
+    left:50px;
+    top:50px;
+    width:55px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u15 {
+    position:absolute;
+    left:110px;
+    top:48px;
+    width:209px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u16_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u16_normal.png');
+}
+
+.u16_container {
+    position:absolute;
+    left:320px;
+    top:51px;
+    width:18px;
+    height:9px;
+}
+
+#u16_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:24px;
+    height:15px;
+}
+
+.u17 {
+    position:absolute;
+    left:2px;
+    top:-4px;
+    width:14px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u18_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u18_normal.png');
+}
+
+.u18_container {
+    position:absolute;
+    left:337px;
+    top:54px;
+    width:3px;
+    height:3px;
+}
+
+#u18_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:9px;
+    height:9px;
+}
+
+.u19 {
+    position:absolute;
+    left:2px;
+    top:-6px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u20_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u20_normal.png');
+}
+
+.u20_container {
+    position:absolute;
+    left:24px;
+    top:66px;
+    width:320px;
+    height:44px;
+}
+
+#u20_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:326px;
+    height:50px;
+}
+
+.u21 {
+    position:absolute;
+    left:2px;
+    top:11px;
+    width:316px;
+    height:22px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u22_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u22_container {
+    position:absolute;
+    left:25px;
+    top:67px;
+    width:44px;
+    height:42px;
+}
+
+#u22_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:50px;
+    height:48px;
+}
+
+.u23 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:40px;
+    height:34px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u24_line {
+    background-image: url('../预订须知和补充条款【10_18】_files/u24_line.png');
+}
+
+.u24_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:44px;
+}
+
+.u24 {
+    position:absolute;
+    left:64px;
+    top:66px;
+    width:10px;
+    height:44px;
+    
+}
+
+.u25_line {
+    background-image: url('../预订须知和补充条款【10_18】_files/u25_line.png');
+}
+
+.u25_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:44px;
+}
+
+.u25 {
+    position:absolute;
+    left:65px;
+    top:66px;
+    width:10px;
+    height:44px;
+    
+}
+
+.u26 {
+    position:absolute;
+    left:36px;
+    top:123px;
+    width:302px;
+    height:336px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u27 {
+    position:absolute;
+    left:381px;
+    top:22px;
+    width:204px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u28_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u0_normal.png');
+}
+
+.u28_container {
+    position:absolute;
+    left:381px;
+    top:45px;
+    width:320px;
+    height:491px;
+}
+
+#u28_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:326px;
+    height:497px;
+}
+
+.u29 {
+    position:absolute;
+    left:2px;
+    top:238px;
+    width:316px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u30_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u30_normal.png');
+}
+
+.u30_container {
+    position:absolute;
+    left:381px;
+    top:45px;
+    width:321px;
+    height:21px;
+}
+
+#u30_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:321px;
+    height:21px;
+}
+
+.u31 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:317px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u32_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u32_normal.png');
+}
+
+.u32_container {
+    position:absolute;
+    left:381px;
+    top:66px;
+    width:320px;
+    height:44px;
+}
+
+#u32_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:326px;
+    height:50px;
+}
+
+.u33 {
+    position:absolute;
+    left:2px;
+    top:11px;
+    width:316px;
+    height:22px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u34_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u34_normal.png');
+}
+
+.u34_container {
+    position:absolute;
+    left:381px;
+    top:66px;
+    width:50px;
+    height:44px;
+}
+
+#u34_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:56px;
+    height:50px;
+}
+
+.u35 {
+    position:absolute;
+    left:2px;
+    top:-4px;
+    width:46px;
+    height:43px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u36_normal {
+    background-image: url('../预订须知和补充条款【10_18】_files/u36_normal.png');
+}
+
+.u36_container {
+    position:absolute;
+    left:471px;
+    top:139px;
+    width:128px;
+    height:81px;
+}
+
+#u36_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:134px;
+    height:87px;
+}
+
+.u37 {
+    position:absolute;
+    left:2px;
+    top:16px;
+    width:124px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u38 {
+    position:absolute;
+    left:450px;
+    top:232px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u39 {
+    position:absolute;
+    left:32px;
+    top:612px;
+    width:775px;
+    height:112px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u40 {
+    position:absolute;
+    left:84px;
+    top:546px;
+    width:200px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u41 {
+    position:absolute;
+    left:24px;
+    top:718px;
+    width:599px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

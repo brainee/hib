@@ -1,0 +1,30 @@
+<link href="style/style.css" rel="stylesheet" />
+<style>
+    .img_show {
+        width:auto;
+        max-width: 90%;
+        height: auto;
+        margin-left:27px;
+        background: #eee;
+    }
+</style>
+<label class="ml_27">延迟加载</label>
+
+<input type="button" id="lazyImg" value="点击我" style="background-color:Orange; width:135px; text-align:center" />
+<div class="img_show">
+    <img alt="" id="img" style="width:100%;"/>
+</div>
+
+<div id="previewPane" class="pane" style="display: block;"><h2>lazyload组件，图片延迟加载</h2>
+
+    <h2>使用方法</h2>
+
+    <h3>lazyload的简单初始化</h3>
+
+<pre><code class="javascript">
+    <span class="keyword">var</span> el = <span class="keyword">this</span>.$el.find(<span class="string">'#img'</span>);         <span class="comment">//获取图片的dom</span>
+    <span class="keyword">var</span> src = prompt(<span class="string">"请输入src"</span>);          <span class="comment">//输入图片的src</span>
+    el.attr(<span class="string">'src'</span>, src);                    <span class="comment">//重置图片的src属性</span>
+    lazyload.lazyload(el);                  <span class="comment">//执行延迟加载</span>
+
+</code></pre></div>

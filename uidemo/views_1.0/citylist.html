@@ -1,0 +1,102 @@
+<div id="wrapper"></div>
+演示：<br />
+<p>
+    这里是列表的使用，适用范围：<br />
+    ① 城市列表<br />
+    ② 航班列表<br />
+    ③ 或者多标签
+</p>
+主要属性如下：
+<pre><code>// @param rootBox {dom}            容器元素的dom
+    // @param filter {String}          用于搜索的字段，以","分割，搜索会按照这些字段进行搜索
+    // @param needTab {bool}           设置是否需要tab标签，比如说只有一个tab的场景（选择机场）
+    // @param foldAll {bool}           是否全部折叠，设置为ture的时候全部会折叠起来，默认为false
+    // @param unFoldOne {bool}         当具有折叠功能时候，是否只能展示一个，默认为false，为true时候只会展示一个
+    // @param needFold {bool}          设置是否需要折叠功能，默认不需要，当设置全部折叠时候该属性会被强制设置为true
+    // @param groupIndex {int}         设置当前显示的标签（国内或者国际），该属性一般存储在localstorage中，需要记录上次信息
+    // @param selectedKey {int}        设置当前选择值，只设置键值，该属性一般存储于localstorage中
+    // @param groupObj {json}          这里传入的一定是已经处理好了的数据,name为标签项，data才是具体数据
+    // @param click {function}         点击每个项目时候触发的事件，data为你点击时候的数据
+
+</code></pre>
+<br />
+<h3>使用方法</h3>
+
+<p>STEP 1: 在RequireJS中引入c.ui.business.group.list</p>
+<pre><code>define(['app/ui/c.ui.business.group.list'], function(cUIBusinessGroupList){
+
+    });
+</code></pre>
+
+<p>STEP 2: 初始化cUIBusinessGroupList</p>
+
+<pre><code>define(['app/ui/c.ui.business.group.list'], function(cUIBusinessGroupList){
+    window.citylist = new cUIBusinessGroupList({......});
+    });
+
+</code></pre>
+
+<h2>demo：citylist的简单初始化</h2>
+<pre><code>
+    //热门数据
+    //国内数据
+
+    var inlandhot = {};
+    inlandhot.name = '热门城市';
+    inlandhot.data = [];
+    for (var k in data.inlandhot) {
+    inlandhot.data.push(data.inlandhot[k]);
+    }
+    //国内数据
+    var inland = [];
+    inland.push(inlandhot);
+
+    for (var k in data.inland) {
+    var obj = {};
+    obj.name = k;
+    obj.data = data.inland[k];
+    inland.push(obj);
+    }
+
+    //国际数据
+    var inter = [];
+    for (var k in data.inter) {
+    var obj = {};
+    obj.name = k;
+    obj.data = data.inter[k];
+    inter.push(obj);
+    }
+
+    window.citylist = new cUIBusinessGroupList({
+    rootBox: this.$('#wrapper'),
+    filter: 'en,py,name,fsten',
+    //  needTab: false,
+
+    needFold: true,
+
+    //            unFoldOne: true,
+    //          foldAll: true,
+    //        groupIndex: 1,
+    //        selectedKey: 28,
+
+    groupObj: [
+    { name: '国内城市', data: inland },
+    { name: '国际城市', data: inter }
+
+    ],
+    click: function (data) {
+
+    var s = '';
+    console.log(data);
+    //执行保存信息
+    //            this.back();
+
+    }
+
+    });
+
+    注意：
+    因为该控件一般在onload 请求数据后调用，调用后html dom便创建结束
+    而每次调用onload dom会重复实例化，所以各位一定要注意，第二次执行onload时候要判断是否已经实例化，实例化便不创建
+
+</code></pre>

@@ -1,0 +1,49 @@
+﻿@using System.Configuration
+
+<!DOCTYPE html>
+<html>
+<head>
+    @RenderPage("../Shared/Header.cshtml")
+</head>
+<body class="gray" onselectstart="return false">
+    @RenderPage("../Shared/BodyLayout.cshtml")
+
+    <script type="text/lizard-config">
+        {
+            "url_schema": "/index/{depetId}/{key}",
+            "model": {
+                "apis": [],
+                "init_data": {"depetId":2, "key":"长江三峡"}
+            },
+            "view":{
+                "header": Lizard.T("headTmpl"),
+                "viewport": Lizard.T("viewportTmpl")
+            },
+            "controller": "@ConfigurationManager.AppSettings["WebresourcePDBaseUrl"]tour/controllers/index.js"
+        }
+    </script>
+
+    <script id="headTmpl" type="text/lizard-template">
+        <h1>团队游</h1>
+    </script>
+
+    <script id="viewportTmpl" type="text/lizard-template">
+        <div class="body nofoot" style="padding-top:0">
+            <div class="inquiry">
+                <dl class="zero_box">
+                    <dd class="city_depart btn_active">
+                        <div id="g_depart" class="tit2" data-id="<%=Lizard.P('depetId')?Lizard.P('depetId'):2%>">上海</div>
+                    </dd>
+                    <dd class="city_arrive btn_active">
+                        <div id="g_dest" class="tit2" data-id="43" data-sltid="0" data-initial="S" data-inland="1"><%=Lizard.P('key')?Lizard.P('key'):'三亚'%></div>
+                    </dd>
+                </dl>
+                <button id="searchlistsubmit" class="btn_org mt20" value=""><i></i>查询</button>
+            </div>
+        </div>
+    </script>
+    @RenderPage("../Shared/Footer.cshtml")
+</body>
+</html>
+
+

@@ -1,0 +1,88 @@
+﻿<link href="style/style.css" rel="stylesheet" />
+<style>
+
+</style>
+<div>
+
+<div class="banner_box" style="width: 100%;" id="imageSliderDemo">
+</div>
+
+<br />
+<input type="button" id="play" value="播放" style="background-color: Orange; width: 135px;
+    text-align: center" />
+<input type="button" id="stop" value="暂停" style="background-color: Orange; width: 135px;
+    text-align: center" />
+
+     <input type="button" id="pre" value="上一张" style="background-color: Orange; width: 135px;
+    text-align: center" />
+
+    <input type="button" id="next" value="下一张" style="background-color: Orange; width: 135px;
+    text-align: center" />
+</div>
+<div id="previewPane" class="pane" style="display: block; ">
+    <h3>主要属性如下：</h3>
+
+<pre><code class="css">// @<span class="keyword">param</span> container <span class="rules">{dom}</span>            容器元素的dom
+// @<span class="keyword">param</span> images <span class="rules">{Array}</span>             轮播图片数组 array <span class="attr_selector">[object]</span> <span class="keyword">object</span> :<span class="rules">{src,alt,onClick,}</span>
+// @<span class="keyword">param</span> autoPlay <span class="rules">{bool}</span>            是否自动播放
+// @<span class="keyword">param</span> index <span class="rules">{int}</span>                当前图片索引
+// @<span class="keyword">param</span> delay <span class="rules">{int}</span>                自动播放延迟(单位：毫秒)
+// @<span class="keyword">param</span> <span class="keyword">dir</span> <span class="rules">{String}</span>              轮播方向
+// @<span class="keyword">param</span> onChanged <span class="rules">{function}</span>       轮播开始的事件，返回数据显示的图片信息，当前显示的索引(从0开始)
+// @<span class="keyword">param</span> onImageClick <span class="rules">{function}</span>    图片点击事件
+// @<span class="keyword">param</span> scope <span class="rules">{object}</span>             点击事件上下文
+// @<span class="keyword">param</span> imageSize<span class="rules">{object}</span>          原autoHeight属性不公开,如果设置必须，宽和高同时设置，如果不设置则根据图片大小等比缩放<span class="attr_selector">[object]</span> <span class="keyword">object</span> :<span class="rules">{width,height}</span>    
+// @<span class="keyword">param</span> showNav <span class="rules">boolean</span>            是否显示导航
+// @<span class="keyword">param</span> errorImageUrl <span class="rules">{string}</span>     图片加载错误显示的图片
+// @<span class="keyword">param</span> defaultImageUrl <span class="rules">{string}</span>   没有图片数据时显示的图片
+</code></pre>
+<h3>插件引用</h3>
+<pre>
+    <code>define(['cUIImageSlider']);
+    </code>
+</pre>
+<h2>几种方法</h2>
+<pre><code class="javascript"><span class="comment">//开始播放</span>
+imageSlider.play();
+<span class="comment">//停止播放</span>
+imageSlider.stop();
+<span class="comment">//重新播放</span>
+imageSlider.rePlay();
+<span class="comment">//跳转至下一张</span>
+imageSlider.next();
+<span class="comment">//跳转至上一张</span>
+imageSlider.pre();
+</code></pre>
+
+<h2>实例化对象</h2>
+
+<pre><code class="javascript"><span class="keyword">this</span>.imageSlider = <span class="keyword">new</span> imageSlider({
+    <span class="comment">//图片数组</span>
+    images: [ {
+        <span class="comment">//图片路径，绝对地址</span>
+        src: <span class="string">"http://res.m.ctrip.com/market/appimg/h5/20140305/3.jpg"</span>,
+        <span class="comment">//点击图片的事件</span>
+        onClick: $.proxy(<span class="function"><span class="keyword">function</span> <span class="params">(imageInfo)</span> {</span>
+            <span class="keyword">this</span>._onSelectedImageClick(imageInfo);
+        },<span class="keyword">this</span>),
+        <span class="comment">//onClick事件的上下文</span>
+        scope: <span class="keyword">this</span> },
+            { src: <span class="string">"http://res.m.ctrip.com/market/appimg/h5/20140305/2.jpg"</span>},
+            { src: <span class="string">"http://res.m.ctrip.com/market/appimg/h5/20140305/1.jpg"</span>}
+    ],
+    <span class="comment">//容器</span>
+    container:$(<span class="string">"#imageSliderDemo"</span>),
+    <span class="comment">//滚动方向,默认LEFT</span>
+    dir: <span class="string">"LEFT"</span>,
+    <span class="comment">//默认显示的图片索引</span>
+    index: <span class="number">0</span>,
+    <span class="comment">//是否自动播放</span>
+    noNeedDefault:<span class="string">'false'</span>，
+    <span class="comment">//是否要阻止浏览器默认行为</span>
+    autoPlay: <span class="literal">true</span>,
+    <span class="comment">//所有图片的单击事件，如果对应的图片设置了自己的click事件，该事件则不执行</span>
+    onImageClick: $.proxy(<span class="keyword">function</span>
+    (imageInfo) { <span class="keyword">this</span>._onImageClick(); }, <span class="keyword">this</span>)
+});
+<span class="keyword">this</span>.imageSlider.paly();
+</code></pre></div>

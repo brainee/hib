@@ -1,0 +1,42 @@
+<link href="style/style.css" rel="stylesheet" />
+<h3>效果</h3>
+
+<nav>
+    <input type="button" id="test" value="点击我" style="background-color:Orange; width:135px; text-align:center">
+    <input type="text" id="input" class="car_combd txt ml_27">
+</nav>
+
+<div id="previewPane" class="pane" style="display: block;"><h2>Attribute</h2>
+
+<pre><code class="css">// @<span class="keyword">param</span> <span class="keyword">title</span> <span class="rules">{dom}</span>             标题dom
+// @<span class="keyword">param</span> content <span class="rules">{int}</span>            内容区dom
+// @<span class="keyword">param</span> itemClick <span class="rules">{function}</span>     回调函数
+// @<span class="keyword">param</span> mask <span class="rules">{Mask}</span>              蒙版遮盖层
+// @<span class="keyword">param</span> scroll <span class="rules">{ScrollList}</span>      滚轮组件
+// @<span class="keyword">param</span> data <span class="rules">{array}</span>             数据源
+// @<span class="keyword">param</span> index <span class="rules">{int}</span>              scroll组件选择索引
+// @<span class="keyword">param</span> key <span class="rules">{String}</span>             scroll当前键值（优先级比index高）
+// @<span class="keyword">param</span> disItemNum <span class="rules">{int}</span>         scroll组件显示项目
+</code></pre>
+
+<h2>使用方法</h2>
+
+<h3>初始化ScrollRadioList</h3>
+
+<pre><code class="javascript">define([<span class="string">'app/ui/c.ui.scroll.radio.list'</span>], <span class="keyword">function</span>(ScrollRadioList){
+    <span class="keyword">var</span> scroll = <span class="keyword">new</span> ScrollRadioList({
+        title: <span class="string">'列表选项'</span>,
+        index: port_place.attr(<span class="string">'index'</span>),          <span class="comment">//默认定位到第几个item上</span>
+        data: data,                               <span class="comment">//要展示到item的数组</span>
+        content: <span class="number">1</span>,
+        disItemNum: <span class="number">3</span>,                            <span class="comment">//显示的item数量</span>
+        itemClick: <span class="function"><span class="keyword">function</span> <span class="params">(item)</span> {</span>              <span class="comment">//选中item触发的事件</span>
+            port_place.attr(<span class="string">'index'</span>, item.index);
+            port_place.val(item.key);
+            console.log(<span class="string">'------'</span>);
+        }
+    });
+});
+
+初始化组件，点击蒙版，或者选择项目组件会自动关闭
+</code></pre></div>

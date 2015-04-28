@@ -1,0 +1,46 @@
+<link href="style/style.css" rel="stylesheet" />
+
+<div id="previewPane" class="pane" style="display: block; "><h2>效果</h2>
+
+<input type="button" id="test" value="点击我" style="background-color:Orange; width:135px; text-align:center" />
+
+<h2>Attribute</h2>
+
+<pre><code class="css">// @<span class="keyword">param</span> retryDom <span class="rules">{dom}</span>           重试按钮dom
+// @<span class="keyword">param</span> callback <span class="rules">{function}</span>      点击按钮时候的回调函数
+</code></pre>
+
+<h2>Method</h2>
+
+<h3>public retryClick</h3>
+
+<pre><code class="css">// @<span class="keyword">param</span> callback <span class="rules">{function}</span>           重写callback的值
+retryClick: function (callback) <span class="rules">{ ... }</span>  //这里主要复写了父类的show和hide方法
+</code></pre>
+
+<h2>使用方法</h2>
+
+<h3>初始化：</h3>
+
+<pre><code class="javascript">define([<span class="string">'app/ui/c.ui.warning404'</span>], <span class="keyword">function</span>(Warning404){
+    <span class="comment">// --------------------</span>
+    <span class="comment">// 初始化warning404控件</span>
+    <span class="keyword">var</span> warning404 = <span class="keyword">new</span> cUI.Warning404({
+        retryDom: <span class="string">''</span>,              <span class="comment">//重写重试按钮的dom结构</span>
+        callback: <span class="keyword">function</span>(){}    <span class="comment">//设置重试按钮的回调</span>
+    });
+
+    <span class="comment">// --------------------</span>
+    <span class="comment">// 设置"重试"按钮回调</span>
+    warning404.retryClick(callback);
+
+    <span class="comment">// --------------------</span>
+    <span class="comment">// 显示warning404</span>
+    warning404.show();
+
+    <span class="comment">// --------------------</span>
+    <span class="comment">// 关闭warning404</span>
+    warning404.hide();
+});
+</code></pre></div>
+

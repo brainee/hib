@@ -1,0 +1,54 @@
+<article class="wrap">
+    <section class="p10">
+        <p>这里结合了scrollradio、scrollRadioList、TipsLayer的综合使用情况</p>
+        <p><a href="#scrollradio" style="color:#f00">scrollradio传送门</a>、<a href="#scrollradiolist" style="color:#f00">scrollRadioList传送门</a></p>
+        <h3>TipsLayer API</h3>
+        <p>TipsLayer是一个widget组件，在下方的展示列表【store数据源】、【store数据源带按钮】中有使用，一般通过下面定义来生成：</p>
+<pre>
+<code>
+    var TipsLayer = WidgetFactory.create('TipsLayer');
+    var l = new TipsLayer({
+    title: 'xxx',
+    html: 'xxxx',
+    });
+    l.show();
+</code>
+</pre>
+        <h4>常用Attribute</h4>
+<pre>
+<code>
+    // @param title: {string},
+    // @param html: {htmlString},
+    // @param buttons: [{'text': '取消','type': 'cancel', 'click': function () {this.hide(); }, {...}]
+
+</code>
+</pre>
+
+        <ul class="list_st_border carlist airport">
+            <li>
+                <label>
+                    单选框</label><em id="port_place" placeholder="click me">click me</em></li>
+            <li>
+                <label>
+                    用车时间change事件</label><em id="port_time" placeholder="click me">click me</em></li>
+            <li>
+                <label>
+                    有效期</label><em id="validity" placeholder="click me">click me</em></li>
+            <li>
+                <label>
+                    store数据源</label><em id="store" placeholder="click me">click me</em></li>
+            <li>
+                <label>
+                    store数据源带按钮</label><em id="storeHasBtn" placeholder="click me">click me</em></li>
+            <li>
+                <label>
+                    设置值</label><em id="key" placeholder="click me">click me</em></li>
+            <li style="background-color : Gray;">
+                <label>
+                    延迟加载</label><em id="lazyImg" placeholder="click me" >click me<img alt="" id="img"/></em></li>
+            <li>
+                <label>
+                    没有数据</label><em id="noRecord" placeholder="click me">click me</em></li>
+        </ul>
+    </section>
+</article>

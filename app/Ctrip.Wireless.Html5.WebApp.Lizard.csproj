@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C28F912-B51F-425A-87C4-21B65DBC1453}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ctrip.Wireless.Html5.WebApp.Lizard</RootNamespace>
+    <AssemblyName>Ctrip.Wireless.Html5.WebApp.Lizard</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="business\c.business.app.js" />
+    <Content Include="business\c.business.rsa.js" />
+    <Content Include="business\c.business.servertime.js" />
+    <Content Include="business\c.business.svc.vevent.js" />
+    <Content Include="business\c.business.ui.ad.js" />
+    <Content Include="business\c.business.view.js" />
+    <Content Include="business\c.business.widget.channel.ad.js" />
+    <Content Include="business\c.business.widget.headerview.js" />
+    <Content Include="business\c.business.widget.member.tip.js" />
+    <Content Include="business\c.business.wxcs.js" />
+    <Content Include="business\c.pad.app.js" />
+    <Content Include="c.abstract.app.js" />
+    <Content Include="common.js" />
+    <Content Include="common\c.ajax.js" />
+    <Content Include="common\c.base.js" />
+    <Content Include="common\c.common.listadapter.js" />
+    <Content Include="common\c.geo.service.js" />
+    <Content Include="common\c.js" />
+    <Content Include="common\c.lazyload.js" />
+    <Content Include="common\c.log.js" />
+    <Content Include="common\c.sales.js" />
+    <Content Include="common\c.ui.ad.js" />
+    <Content Include="common_r.js" />
+    <Content Include="core\c.core.inherit.js" />
+    <Content Include="hybrid\c.hybrid.facade.js" />
+    <Content Include="model\c.abstract.model.js" />
+    <Content Include="model\c.model.js" />
+    <Content Include="model\c.multiple.data.js" />
+    <Content Include="model\c.user.model.js" />
+    <Content Include="page\c.page.base.js" />
+    <Content Include="page\c.page.common.list.js" />
+    <Content Include="page\c.page.factory.js" />
+    <Content Include="store\c.abstract.storage.js" />
+    <Content Include="store\c.abstract.store.js" />
+    <Content Include="store\c.common.store.js" />
+    <Content Include="store\c.local.storage.js" />
+    <Content Include="store\c.local.store.js" />
+    <Content Include="store\c.memorystore.js" />
+    <Content Include="store\c.session.storage.js" />
+    <Content Include="store\c.session.store.js" />
+    <Content Include="store\c.store.package.js" />
+    <Content Include="ui\c.ui.abstract.view.js" />
+    <Content Include="ui\c.ui.ad.js" />
+    <Content Include="ui\c.ui.alert.js" />
+    <Content Include="ui\c.ui.animation.js" />
+    <Content Include="ui\c.ui.base.js" />
+    <Content Include="ui\c.ui.citylist.js" />
+    <Content Include="ui\c.ui.core.js" />
+    <Content Include="ui\c.ui.datasource.js" />
+    <Content Include="ui\c.ui.event.listener.js" />
+    <Content Include="ui\c.ui.hash.observe.js" />
+    <Content Include="ui\c.ui.head.warning.js" />
+    <Content Include="ui\c.ui.history.js" />
+    <Content Include="ui\c.ui.input.clear.js" />
+    <Content Include="ui\c.ui.js" />
+    <Content Include="ui\c.ui.layer.js" />
+    <Content Include="ui\c.ui.loading.js" />
+    <Content Include="ui\c.ui.loading.layer.js" />
+    <Content Include="ui\c.ui.mask.js" />
+    <Content Include="ui\c.ui.page.view.js" />
+    <Content Include="ui\c.ui.scroll.js" />
+    <Content Include="ui\c.ui.scroll.radio.js" />
+    <Content Include="ui\c.ui.scroll.radio.list.js" />
+    <Content Include="ui\c.ui.scrolllist.js" />
+    <Content Include="ui\c.ui.switch.js" />
+    <Content Include="ui\c.ui.toast.js" />
+    <Content Include="ui\c.ui.view.js" />
+    <Content Include="ui\c.ui.warning.js" />
+    <Content Include="ui\c.ui.warning404.js" />
+    <Content Include="ui\c.ui.scrolllist_备份.js" />
+    <Content Include="ui\c.ui.num.js" />
+    <Content Include="ui\c.ui.group.list.js" />
+    <Content Include="ui\c.ui.business.group.list.js" />
+    <Content Include="ui\c.ui.tab.js" />
+    <Content Include="ui\c.ui.bubble.layer.js" />
+    <Content Include="util\c.utility.crypt.js" />
+    <Content Include="util\c.utility.date.js" />
+    <Content Include="util\c.utility.hash.js" />
+    <Content Include="util\c.utility.hybrid.js" />
+    <Content Include="util\c.utility.js" />
+    <Content Include="util\c.utility.servertime.js" />
+    <Content Include="util\c.validate.js" />
+    <Content Include="widget\c.widget.abstract.calendar.js" />
+    <Content Include="widget\c.widget.calendar.js" />
+    <Content Include="widget\c.widget.calendar.price.js" />
+    <Content Include="widget\c.widget.captcha.js" />
+    <Content Include="widget\c.widget.factory.js" />
+    <Content Include="widget\c.widget.geolocation.js" />
+    <Content Include="widget\c.widget.guider.js" />
+    <Content Include="widget\c.widget.headerview.js" />
+    <Content Include="ui\c.ui.imageSlider.js" />
+    <Content Include="widget\c.widget.inputValidator.js" />
+    <Content Include="widget\c.widget.listview.js" />
+    <Content Include="widget\c.widget.member.js" />
+    <Content Include="widget\c.widget.publisher.js" />
+    <Content Include="widget\c.widget.slide.js" />
+    <Content Include="widget\c.widget.tipslayer.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2075</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>C:\DevTools\ConfigGen\ConfigGen.exe -gd "$(ProjectDir)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

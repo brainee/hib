@@ -1,0 +1,58 @@
+<link href="style/style.css" rel="stylesheet" />
+<div id="previewPane" class="pane" style="display: block; "><h2>这里是c.widget.calendar的使用，该插件提供日历选择功能</h2>
+
+<h2>首先需要创建calendar插件</h2>
+
+<pre><code>var Calendar = WidgetFactory.create('Calendar');</code></pre>
+
+<h2>然后声明Calendar的一个实例</h2>
+
+<pre><code class="javascript"><span class="keyword">var</span> calendar = <span class="keyword">new</span> Calendar({
+    date: {},
+    title: <span class="string">''</span>,
+    callback: <span class="function"><span class="keyword">function</span> <span class="params">()</span>{</span>},
+    Months: <span class="number">6</span>,
+    onShow: <span class="function"><span class="keyword">function</span> <span class="params">()</span>{</span>},
+    onHide:<span class="function"><span class="keyword">function</span> <span class="params">()</span>{</span>}
+})
+</code></pre>
+
+<p>注：callback为设置日期后的回调函数，Months是日历插件显示的月数，onShow和onHide由状态trigger引发</p>
+
+<h2>calender主要提供以下几种方法</h2>
+
+<pre><code>calendar.setDate()    //设定日期
+calendar.addDate()    //增加日期
+calendar.removeDate() //删除日期
+calendar.getDate()    //获取日期
+</code></pre>
+
+<h2>demo</h2>
+<input type="button" id="demo1" value="点击我" style="background-color: Orange; width: 135px;text-align: center" />
+<span></span>
+
+<h2>这里是c.widget.calendar.price的使用，该插件提供日历选择功能</h2>
+
+<h2>首先需要创建calendar.price插件</h2>
+
+<pre><code>var Calendar_Price = WidgetFactory.create('Calendar.Price');</code></pre>
+
+<h2>然后声明Calendar_Price 的一个实例</h2>
+
+<pre><code class="javascript"><span class="keyword">var</span> calendar = <span class="keyword">new</span> Calendar_Price({
+    date: {},
+    validEndDate: endDate,
+    curDate: <span class="string">'start'</span>,
+    Months: <span class="number">6</span>,
+    validDates: dateList,
+    showChineseHoliday: <span class="literal">true</span>,
+    showHoliday: <span class="literal">true</span>,
+    callback: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>}
+});
+</code></pre>
+
+<h2>demo</h2>
+<input type="button" id="demo2" value="点击我" style="background-color: Orange; width: 135px;text-align: center" />
+<span></span>
+</div>
+

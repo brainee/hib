@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ctrip test</title>
+    <link href="./node_modules/mocha/mocha.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <!-- Lizard 依赖的view -->
+    <div id="headerview" style="height: 48px;">
+      <header></header>
+    </div>
+    <div id="main">
+      <div class="main-frame">
+        <div class="main-viewport"></div>
+        <div class="main-state"></div>
+      </div>  
+    </div>
+<script type="text/lizard-template" id="viewportTmpl">
+  <div></div>
+</script>
+<script type="text/lizard-template" id="demoTemplate">
+  <div></div>
+</script>
+<script type="text/lizard-template" id="listTemplate">
+  <h2>列表</h2>
+  <ul>
+    <% _.each(list, function(item) { %>
+    <%= Lizard.T('itemTemplate', item) %>
+    <% }); %>
+  </ul>
+</script>
+<script type="text/lizard-template" id="itemTemplate">
+  <li><%= title %></li>
+</script>
+  </body>
+  <script type="text/javascript" src="../webapporigin/lizard.seed.js" pdConfig="./runner.js"></script>
+</html>

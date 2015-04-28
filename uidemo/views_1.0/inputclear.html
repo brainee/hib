@@ -1,0 +1,22 @@
+<p>
+    这里是c.ui.inputclear的使用，该插件主要清空文本框中的数据
+</p>
+主要属性如下：
+<pre><code>
+// @param input {dom}                 需要添加功能的文本框
+// @param clearClass {String}         自定义class
+// @param clearCallback {function}    清空后的回调函数
+// @param offset {object}             设置点击按钮的位置
+</code></pre>
+<br />
+<h2>demo：inputclear的简单初始化</h2>
+<pre><code>define(['app/ui/c.ui.input.clear'], function(InputClear){
+    InputClear(el,null,null,{});//el为你添加功能的文本框
+});
+</code></pre>
+<article>
+    <input type="button" id="demo" value="点击我" style="background-color:Orange; width:135px; text-align:center" />
+    <div>
+        <input type="text" id="input" class="car_combd txt" style="border:1px red solid; height:35px; width:100%;" />
+    </div>
+</article>

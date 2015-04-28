@@ -1,0 +1,47 @@
+﻿<h3>简单描述</h3>
+
+<p>给类用于提供一个可选择的阀（相当于radio）</p>
+
+<h3>效果</h3>
+
+<div class="hm"></div>
+
+        <div id="msg">123</div>
+<h3>Method</h3>
+
+<p><strong>public unChecked</strong></p>
+
+<pre><code>//将控件置为非选择状态
+unChecked: function () { ... }
+</code></pre>
+
+<p><strong>public checked</strong></p>
+
+<pre><code>//将控件置为选择状态
+checked: function () { ... }
+</code></pre>
+
+<p><strong>public getStatus</strong></p>
+
+<pre><code>//获得控件当前选择状态
+getStatus: function () { ... }
+</code></pre>
+
+<p>这里主要复写了父类的show和hide方法</p>
+
+<h3>使用方法</h3>
+
+<p>STEP 1: 在RequireJS中引入c.ui.switch</p>
+
+<pre><code>define(['app/ui/c.ui.switch'], function(_Switch){
+
+});
+</code></pre>
+
+<p>STEP 2: 初始化</p>
+
+<pre><code>define(['app/ui/c.ui.mask'], function(_Switch){
+  var mask = new _Switch();
+});
+</code></pre>
+

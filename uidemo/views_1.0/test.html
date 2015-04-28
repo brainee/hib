@@ -1,0 +1,93 @@
+<article class="greyfont">
+    <section class="search_wrap">
+        <div class="search_box ">
+            <input id="city_keyword" class="search_input abs_size" placeholder="北京/beijing" />
+            <span class="close_icon" style="display:none"></span>
+        </div>
+        <button type="button" id="city_confirm" class="search_cancel">取消</button>
+    </section>
+
+    <section class="city_box">
+        <ul id="city_tab" class="tab_b clearfix">
+            <li class="abs_size tabcrt" data-id="0">国内城市</li>
+            <li class="abs_size" data-id="1">海外城市</li>
+        </ul>
+
+        <dl id="city_inlandbox" class="citylist" lazyTap="true">
+
+        </dl>
+
+        <dl id="city_interbox" class="citylist">
+
+        </dl>
+    </section>
+
+    <section class="associate citylist">
+    </section>
+
+</article>
+
+<script type="text/template" id="citylisttpl">
+    <dt class="city_localbox">当前城市</dt>
+    <dd class="cityitem city_local city_localbox">定位中</dd>
+    <%
+    if (history && history.length > 0) {
+    %>
+    <dt>历史城市</dt>
+    <%
+    for(var i=0,len=history.length;i<len;i++){
+    var item = history[i];
+    %>
+    <dd class="cityitem <%if(selectedCity.cityid == item.id){%>ok_crt<%} %>"
+        data-id="<%=item.id %>"
+        data-name="<%=item.dsp %>"
+        data-attr="<%=item.attr %>">
+        <%=item.dsp %>
+    </dd>
+    <%
+    }
+    }
+    %>
+    <%
+    if (hots && hots.length > 0) {
+    %>
+    <dt>热门城市</dt>
+    <%
+    for(var i=0,len=hots.length;i<len;i++){
+    var item = hots[i];
+    %>
+    <dd class="cityitem <%if(selectedCity.cityid == item.id){%>ok_crt<%} %>"
+        data-id="<%=item.id %>"
+        data-name="<%=item.name %>"
+        data-attr="<%=item.attr %>">
+        <%=item.name %>
+    </dd>
+    <%
+    }
+    }
+    %>
+    <%
+    if (list) {
+    var keycode = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    for(var i=1,len=keycode.length;i<len;i++){
+    var key = keycode[i],items = list[key];
+    if(items && items.length){
+    %>
+    <dt><%=key %></dt>
+    <%
+    for(var t=0,tlen=items.length;t<tlen;t++){
+    %>
+    <dd class="cityitem <%if(selectedCity.cityid == items[t].id){%>ok_crt<%} %>"
+        data-id="<%=items[t].id %>"
+        data-name="<%=items[t].name %>"
+        data-attr="<%=items[t].attr %>"
+        data-filter="<%=items[t].fstpy.toLowerCase() %> <%=items[t].py.toLowerCase() %> <%=items[t].name %> <%=items[t].en.toLowerCase() %> <%=items[t].jp.toLowerCase() %>">
+        <%=items[t].name %>
+    </dd>
+    <%
+    }
+    }
+    }
+    }
+    %>
+</script>

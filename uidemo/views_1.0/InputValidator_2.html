@@ -1,0 +1,157 @@
+<input type="text" id="idCard" class="formValidate" data-cfg="{requred:true, type:'idCard'}" />
+
+<button id="demo1">click me</button>
+
+
+
+<style>
+    /*inputValidator相关*/
+    .validateTips
+    {
+        min-width: 100px;
+        border-radius: 2px;
+        padding: 5px 10px;
+        z-index: 500;
+        position: absolute;
+        font-size: 12px;
+    }
+    .validateInit
+    {
+        background: #FFFFE0;
+        border: 1px solid #F7CE39;
+    }
+    .validateError
+    {
+        background: orange;
+        border: 1px solid red;
+    }
+    .validateSuc
+    {
+        background: #79D62D;
+        border: 1px solid Green;
+    }
+    .triangle_icon
+    {
+        position: absolute;
+    }
+    .triangle_icon div
+    {
+        border-style: solid;
+        border-width: 6px;
+        position: absolute;
+    }
+
+    /*上边提示*/
+    .posTop .triangle_icon
+    {
+        width: 12px;
+        height: 12px;
+        bottom: -12px;
+    }
+    .posTop .triangle_icon .after
+    {
+        bottom: 1px;
+    }
+    .posTop .triangle_icon .after
+    {
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+    .posTop .triangle_icon .before
+    {
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+
+    /*右边提示*/
+    .posRight .triangle_icon
+    {
+        width: 12px;
+        height: 12px;
+        left: -12px;
+    }
+    .posRight .triangle_icon .after
+    {
+        left: 1px;
+    }
+    .posRight .triangle_icon .after
+    {
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    .posRight .triangle_icon .before
+    {
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+
+    /*下边提示*/
+    .posBottom .triangle_icon
+    {
+        width: 12px;
+        height: 12px;
+        top: -12px;
+    }
+    .posBottom .triangle_icon .after
+    {
+        top: 1px;
+    }
+    .posBottom .triangle_icon .after
+    {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+    .posBottom .triangle_icon .before
+    {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+
+
+    /*初始化时候的皮肤*/
+    .validateInit .before
+    {
+        border-color: #F7CE39;
+    }
+    .validateInit .after
+    {
+        border-color: #FFFFE0;
+    }
+
+    /*失败时候的皮肤*/
+    .validateError .before
+    {
+        border-color: red;
+    }
+    .validateError .after
+    {
+        border-color: orange;
+    }
+
+    /*成功时候的皮肤*/
+    .validateSuc .before
+    {
+        border-color: Green;
+    }
+    .validateSuc .after
+    {
+        border-color: #79D62D;
+    }
+
+    input
+    {
+        border: 1px solid rgb(235, 230, 230);
+        margin: 2px;
+        width: 300px;
+    }
+    .cui-input-error
+    {
+        background: #fffaeb !important;
+    }
+</style>

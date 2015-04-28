@@ -1,0 +1,42 @@
+##这里是cUITab的使用，该插件作为tab切换使用
+
+##主要属性如下：
+<pre><code>// @param rootBox {dom}           容器元素的dom
+// @param data {array}            对应数据
+// @param selectedKey {int}       设置选择值，必须正确
+// @param changed {function}      改变时候触发事件
+// @param changeAble {function}   扩展应用，暂时不予关注，当返回false时候设置值无效
+</code></pre>
+
+##Tabs的简单初始化
+<pre><code>define(['app/ui/c.ui.tab'], function(cUITab){
+    var data = [
+        { id: 1, name: '中国' },
+        { id: 2, name: '美国' },
+        { id: 3, name: '英国' }
+    ];
+    tablist = new cUITab({
+        //容器元素
+        rootBox: this.$('#wrapper'),
+        //对应数据
+        data: data,
+        //设置选择值，必须正确
+        selectedKey: 2,
+        //改变时候触发事件
+        changed: function (data) {
+
+            var s = '';
+            console.log(data);
+        },
+        changeAble: function () {          //扩展应用，暂时不予关注，当返回false时候设置值无效
+            //   alert('不能选择')
+            //   return false;
+        }
+    });
+});
+
+注意：
+因为该控件一般在onload 请求数据后调用，调用后html dom便创建结束
+而每次调用onload dom会重复实例化，所以各位一定要注意，第二次执行onload时候要判断是否已经实例化，实例化便不创建
+
+</code></pre>

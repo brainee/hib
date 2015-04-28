@@ -1,0 +1,65 @@
+<link href="style/style.css" rel="stylesheet" />
+<div id="previewPane" class="pane" style="display: block; "><h2>这里是c.ui.toast的使用，该插件提供提供类似于alert的弹出层</h2>
+<pre><code class="css">// @<span class="keyword">param</span> <span class="keyword">title</span> <span class="rules">{String}</span>       Toast需要显示的内容
+// @<span class="keyword">param</span> sleep <span class="rules">{int}</span>           Toast显示的时间
+// @<span class="keyword">param</span> callback <span class="rules">{function}</span>   Toast消失之后的回调
+// @<span class="keyword">param</span> clickToHide <span class="rules">{boolean}</span> 点击Toast是否消失
+show: function (<span class="keyword">title</span>, sleep, callback, clickToHide) <span class="rules">{ ... }</span>
+</code></pre>
+
+
+<h2>public setContent</h2>
+
+<pre><code class="css">// @<span class="keyword">param</span> content <span class="rules">{String}</span>      Toast需要显示的内容
+setContent: function (content)<span class="rules">{}</span>
+</code></pre>
+
+<h2>1、简单使用：</h2>
+<input type="button" id="test1" value="点击我" style="background-color:Orange; width:135px; text-align:center" />
+
+<pre><code class="javascript">define([<span class="string">'app/ui/c.ui.toast'</span>], <span class="keyword">function</span>(Toast){
+
+    <span class="comment">// --------------------</span>
+    <span class="comment">// 初始化Toast控件</span>
+    <span class="keyword">var</span> toast = <span class="keyword">new</span> Toast();
+
+    <span class="comment">// --------------------</span>
+    <span class="comment">// 显示Toast</span>
+    <span class="keyword">var</span> toastContent = <span class="string">'hello toast!'</span>;
+    toast.show(
+        toastContent,         <span class="comment">//Toast会显示的信息</span>
+        <span class="number">2</span>,                    <span class="comment">//Toast会停留的时间</span>
+        <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>     },  <span class="comment">//Toast消失之后的回调</span>
+        <span class="literal">true</span>                  <span class="comment">//点击Toast是否会消失，默认为true</span>
+    );
+});
+
+<span class="comment">//以上设置效果：2s之后Toast会自动关闭，或者点击Toast会关闭</span>
+</code></pre>
+
+<h2>2、callback使用：</h2>
+<input type="button" id="test2" value="点击我" style="background-color:Orange; width:135px; text-align:center" />
+
+<pre><code class="javascript">define([<span class="string">'app/ui/c.ui.toast'</span>], <span class="keyword">function</span>(Toast){
+
+    <span class="comment">// --------------------</span>
+    <span class="comment">// 初始化Toast控件</span>
+    <span class="keyword">var</span> toast = <span class="keyword">new</span> Toast();
+
+    <span class="comment">// --------------------</span>
+    <span class="comment">// 显示Toast</span>
+    <span class="keyword">var</span> toastContent = <span class="string">'hello toast!'</span>;
+    toast.show(
+        toastContent,         <span class="comment">//Toast会显示的信息</span>
+        <span class="number">2</span>,                    <span class="comment">//Toast会停留的时间</span>
+        <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>        <span class="comment">//Toast消失之后的回调</span>
+            alert(<span class="string">'hello callback'</span>);
+        },
+        <span class="literal">true</span>                  <span class="comment">//点击Toast是否会消失，默认为true</span>
+    );
+});
+
+<span class="comment">//以上设置效果：2s之后Toast会自动关闭，或者点击Toast会关闭</span>
+</code></pre>
+
+</div>

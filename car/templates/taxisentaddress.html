@@ -1,0 +1,40 @@
+﻿<article class="greyfont" id="areabox">
+    <section class="search_wrap">
+        <div class="search_box clear-input-box">
+            <input id="city_keyword_u" class="search_input abs_size" placeholder="请输入出发地点" maxlength="40" />
+            <a class="clear-input " href="javascript:;"><span></span></a>
+        </div>
+    </section>
+
+    <section class="city_box">
+        <dl id="city_localbox" class="citylist">
+            <dt>当前位置及周边</dt>
+            <dd>正在定位...</dd>
+        </dl>
+        <dl id="city_inlandbox" class="citylist"></dl>
+    </section>
+
+    <section class="associate citylist"></section>
+</article>
+
+<script type="text/template" id="taxisentcitylisttpl">
+    <%
+    for (var i = 0, len = list.length; i < len; i++) {
+        var pos = list[i];
+        %>
+        <dd class="cityitem"
+            data-history="<%=(+list.isHistory) %>" 
+            data-name="<%=pos.name %>"
+            data-city="<%=list.isHistory ? pos.city : list.city %>"
+            data-addr="<%=pos.address %>"
+            data-lng="<%=pos.location.split(',')[0] %>"
+            data-lat="<%=pos.location.split(',')[1] %>">
+            <%=pos.name%>
+            <small class="ellips_line2">
+                <%=pos.address%>
+            </small>
+        </dd>
+        <%
+    }
+    %>
+</script>

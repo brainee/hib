@@ -1,0 +1,67 @@
+<link href="style/style.css" rel="stylesheet" />
+<div id="previewPane" class="pane" style="display: block; "><h2>这里是cUITab的使用，该插件作为tab切换使用</h2>
+
+<h2>主要属性如下：</h2>
+
+<pre><code class="css">// @<span class="keyword">param</span> rootBox <span class="rules">{dom}</span>           容器元素的dom
+// @<span class="keyword">param</span> data <span class="rules">{array}</span>            对应数据
+// @<span class="keyword">param</span> selectedKey <span class="rules">{int}</span>       设置选择值，必须正确
+// @<span class="keyword">param</span> changed <span class="rules">{function}</span>      改变时候触发事件
+// @<span class="keyword">param</span> changeAble <span class="rules">{function}</span>   扩展应用，暂时不予关注，当返回false时候设置值无效
+</code></pre>
+
+<h2>Tabs的简单初始化</h2>
+
+<pre><code class="javascript">define([<span class="string">'app/ui/c.ui.tab'</span>], <span class="keyword">function</span>(cUITab){
+    <span class="keyword">var</span> data = [
+        { id: <span class="number">1</span>, name: <span class="string">'中国'</span> },
+        { id: <span class="number">2</span>, name: <span class="string">'美国'</span> },
+        { id: <span class="number">3</span>, name: <span class="string">'英国'</span> }
+    ];
+    tablist = <span class="keyword">new</span> cUITab({
+        <span class="comment">//容器元素</span>
+        rootBox: <span class="keyword">this</span>.$(<span class="string">'#wrapper'</span>),
+        <span class="comment">//对应数据</span>
+        data: data,
+        <span class="comment">//设置选择值，必须正确</span>
+        selectedKey: <span class="number">2</span>,
+        <span class="comment">//改变时候触发事件</span>
+        changed: <span class="function"><span class="keyword">function</span> <span class="params">(data)</span> {</span>
+
+            <span class="keyword">var</span> s = <span class="string">''</span>;
+            console.log(data);
+        },
+        changeAble: <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>          <span class="comment">//扩展应用，暂时不予关注，当返回false时候设置值无效</span>
+            <span class="comment">//   alert('不能选择')</span>
+            <span class="comment">//   return false;</span>
+        }
+    });
+});
+
+注意：
+因为该控件一般在onload 请求数据后调用，调用后html dom便创建结束
+而每次调用onload dom会重复实例化，所以各位一定要注意，第二次执行onload时候要判断是否已经实例化，实例化便不创建
+
+</code></pre>
+
+<h2>效果：</h2>
+
+<div id="wrapper" style="padding: 0 27px 0 26px;"></div>
+</div>
+<div class="js-tab">
+</div>
+<div class="scroll-tab">
+  <div class="scroll-tab-inner">
+    <div class="scroll-tab-item">
+      1
+    </div>
+    <div class="scroll-tab-item">
+      2
+    </div>
+    <div class="scroll-tab-item">
+      3
+    </div>
+  </div>
+</div>
+<pre>
+代码自己看tabs.js,里面有注释

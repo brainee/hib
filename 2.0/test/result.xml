@@ -1,0 +1,71 @@
+<testsuite name="Mocha Tests" tests="22" failures="4" errors="4" skipped="-1" timestamp="Tue, 06 May 2014 06:43:02 GMT" time="0.467">
+<testcase classname="inherit .Class()" name="创建父类" time="0.002"/>
+<testcase classname="inherit .Class()" name="子类继承父类" time="0.001"/>
+<testcase classname="inherit .Class() #initialize()" name="初始化" time="0"/>
+<testcase classname="inherit .Class() #__propertys__()" name="属性赋值" time="0.001"/>
+<testcase classname="inherit .Class() #__propertys__()" name="子类继承父类属性" time="0"/>
+<testcase classname="inherit .Extend()" name="静态属性扩展" time="0"/>
+<testcase classname="inherit .Extend()" name="混合扩展,后面参数的权重大于前面" time="0.001"/>
+<testcase classname="inherit .implement()" name="对原型链的扩充" time="0"/>
+<testcase classname="ajax .get()" name="正确请求" time="0.009"/>
+<testcase classname="ajax .get()" name="成功函数触发" time="0.005"/>
+<testcase classname="ajax .get()" name="失败函数触发" time="0.002"/>
+<testcase classname="ajax .post()" name="正确请求" time="0.002"/>
+<testcase classname="ajax .post()" name="成功函数触发" time="0.001"/>
+<testcase classname="ajax .post()" name="失败函数触发" time="0.001"/>
+<testcase classname="ajax .jsonp()" name="正确请求" time="0.006" message="expected { key: 'value' } to equal '{&amp;quot;key&amp;quot;:&amp;quot;value&amp;quot;}'"><failure classname="ajax .jsonp()" name="正确请求" time="0.006" message="expected { key: 'value' } to equal '{&amp;quot;key&amp;quot;:&amp;quot;value&amp;quot;}'"><![CDATA[AssertionError: expected { key: 'value' } to equal '{&quot;key&quot;:&quot;value&quot;}'
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/chai/chai.js:925
+    at assertEqual (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/chai/chai.js:1402)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/chai/chai.js:3627
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/testcases/common/c.ajax.js:170
+    at callFn (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4338)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4331
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4728
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4819
+    at next (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4653)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4663
+    at next (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4601)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4625
+    at done (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4300)
+    at callFn (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4343)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4331
+    at next (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4626)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4630
+    at timeslice (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:5761)]]></failure></testcase>
+<testcase classname="model #excute()" name="触发error函数" time="0.009" message="expected 'sucess' to be an error"><failure classname="model #excute()" name="触发error函数" time="0.009" message="expected 'sucess' to be an error"><![CDATA[AssertionError: expected 'sucess' to be an error
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/chai/chai.js:925
+    at an (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/chai/chai.js:1118)
+    at assert (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/chai/chai.js:3556)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/testcases/model/c.model.js:60
+    at callFn (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4338)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4331
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4728
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4819
+    at next (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4653)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4663
+    at next (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4601)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4625
+    at done (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4300)
+    at callFn (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4343)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4331
+    at next (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4626)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4630
+    at timeslice (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:5761)]]></failure></testcase>
+<testcase classname="model #getTag()" name="得到的Tag是否正确" time="0.001"/>
+<testcase classname="model #setParam(),#getParam()" name="设置参数是否正确" time="0.001"/>
+<testcase classname="ui.abstract.view #initialize(), #__propertys__()" name="构造函数初始化" time="0.001"/>
+<testcase classname="ui.abstract.view #initialize(), #__propertys__()" name="初始化添加基本事件" time="0"/>
+<testcase classname="ui.abstract.view #rootBox" name="默认为body" time="0.001" message="'undefined' is not an object (evaluating 'view.rootBox.is')"><failure classname="ui.abstract.view #rootBox" name="默认为body" time="0.001" message="'undefined' is not an object (evaluating 'view.rootBox.is')"><![CDATA[TypeError: 'undefined' is not an object (evaluating 'view.rootBox.is')
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/testcases/ui/c.ui.abstract.view.js:57
+    at callFn (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4338)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4331
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4728
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4819
+    at next (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4653)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4663
+    at next (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4601)
+    at file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:4630
+    at timeslice (file:///D:/source/UISolution/website/_webresource_/code/lizard/1.1/test/node_modules/mocha/mocha.js:5761)]]></failure></testcase>
+<testcase classname="ui.abstract.view #rootBox" name="设置rootBox" time="0.001"/>
+<testcase classname="ui.abstract.view" name="&quot;before each&quot; hook" time="0.01" message="Script error. (:0)"><failure classname="ui.abstract.view" name="&quot;before each&quot; hook" time="0.01" message="Script error. (:0)"><![CDATA[undefined]]></failure></testcase>
+</testsuite>
